@@ -19,25 +19,51 @@ for(var x = 0; x <links.length;x++){
         menu_visible = false;
     }
 }
-//creo las barritas de una barra particular identificada por su id
-function crearBarra(id_barra){
-    for(i=0; i<=16;i++){
-        let div = document.createElement("div");
-        div.className= "e";
-        id_barra.appendChid(div);
+
+
+let contadores = [-1,-1,-1,-1,-1,-1];
+let entro = false;
+function efectoHabilitado(){
+    var habilidades = document.getElementById("habilidades");
+    var disttancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
+    if(disttancia_skills>=300 && entro==false){
+        entro = true;
+        const intervalHtml= setInterval(function(){
+            pintarbarra(html, 15, 0, intervalHtml);
+        },100);
+        const intervalJavascript= setInterval(function(){
+            pintarbarra(javascript, 11, 1, intervalJavascript);
+        },100);
+        const intervalWordpress= setInterval(function(){
+            pintarbarra(wordpress, 10, 2, intervalWordpress);
+        },100);
+        const intervalConstruccion= setInterval(function(){
+            pintarbarra(construccion, 8, 3, intervalConstruccion);
+        },100);
+        const intervalMecanicadelautomotriz= setInterval(function(){
+            pintarbarra(mecanicadelautomotriz, 16, 4, intervalMecanicadelautomotriz);
+        },100);
+        const intervalGacista= setInterval(function(){
+            pintarbarra(gacista, 14, 5, intervalGacista);
+        },100);
+
 
     }
 }
-// selecciono todas las barras generales para luego manipurarlas 
-let html = document.getElementById("html");
-crearBarra(html);
-let javascript = document.getElementById("javascript");
-crearBarra(javascript);
-let wordspress = document.getElementById("wordspress");
-crearBarra(wordspress);
-let photoshop= document.getElementById("photoshop");
-crearBarra(photoshop);
-let construccion= document.getElementById("construccion");
-crearBarra(construccion);
-let gacista = document.getElementById("gacista");
-crearBarra(gacista);
+
+
+
+function pintarbarra(id_barra, cantidad, indice, intervalo){
+    contadores[indice]++;
+    x= contadores[indice];
+    if (x<cantidad) {
+        let elementos=id_barra.getElementsByClassName("e");    
+        elementos[x].style.backgroundColor="#940253";
+    }else{
+        clearInterval(interval)
+    }
+}
+window.onscroll =function (){
+    efectoHabilitado();
+    
+}

@@ -29,9 +29,9 @@ html{
 .inicio .contenido-seccion header nav{
     position: fixed;
     margin-left: 60px;
-    background-color: #940253;
+    background-color: #08bbd3;
     padding: 15px;
-    border-color: 10px;
+    border-color: 15px;
     text-align: left;
     z-index: 99;
     display: none;
@@ -51,12 +51,12 @@ html{
     text-shadow: 0 0 35px #fff;
 }
 .inicio .contenido-seccion header .logo .color{
-    color: #940253;
+    color: #08bbd3;
     font-family: "Yellowtail";
 }
 .inicio .contenido-seccion header .nav-bar{
     position: fixed;
-    background-color: #940253;
+    background-color: #08bbd3;
     font-size: 20px;
     width: 50px;
     height: 50px;
@@ -88,7 +88,7 @@ html{
     display: inline-block;
     text-decoration: none;
     background-color: #000;
-    color: #940253;
+    color: #08bbd3;
     border: 1px solid #940253;
     border-radius: 50%;
     width: 40px;
@@ -108,7 +108,7 @@ html{
 .inicio .contenido-seccion .foto img{
     max-width: 200px;
     border-radius: 50%;
-    border: 5px solid #940253;
+    border: 5px solid #08bbd3;
     position: absolute;
     left: 50%;
     top:  -100px;
@@ -157,7 +157,7 @@ html{
     display: inline-block;
     width: 40px;
     height: 40px;
-    border: 2px solid #940253;
+    border: 2px solid #08bbd3;
     line-height: 40px;
     border-radius: 50%;
 }
@@ -203,11 +203,11 @@ html{
     display: flex;
     border: 1px solid #940253;
     padding: 2px;
-    border-radius: 3px;
+    border-radius: 4px;
     margin-right: 10px;
 }
 .habilidades .contenido-seccion .barra .e{
-    background-color: #363636;
+    background-color: #08bbd3;
     width: 20px;
     height: 30px;
     margin-right: 2px;
@@ -294,5 +294,42 @@ html{
     margin-top: 50px;
  }
  .contacto .contenido-seccion .fila .col h2{
-    color: #940253;
+    color: #08bbd3;
  }
+ /*SECCION RESPONSIVE*/
+ @media screen and (max-width:800px){
+   .habilidades .contenido-seccion .fila{
+    display: block;
+   }
+   .habilidades .contenido-seccion .fila .col .cont-barra{
+    justify-content: center;
+   }
+   .sobremi .contenido-seccion .fila{
+    display: block;
+   }
+   .sobremi .contenido-seccion .fila .col{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+   }
+   .resumen .contenido-seccion .info{
+    display: block;
+   }
+   .resumen .contenido-seccion .info .col{
+    width: 90%;
+    margin: auto;
+   }
+   .resumen .contenido-seccion .info .col .titulo{
+    display: block;
+    text-align: center;
+   }
+   .resumen .contenido-seccion .info .col table{
+    margin-top: 10px;
+    margin-bottom: 30px;
+   }
+   .contacto .contenido-seccion .fila{
+    display: block;
+   }
+ }
+    
+ 
